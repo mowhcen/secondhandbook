@@ -56,11 +56,13 @@ export function RecommendationSystem({ books }: { books: Book[] }) {
     }, [books]);
 
     return (
-        <div>
-            <h2>Recommended Books</h2>
-            <ul>
+        <div className="container">
+            <h2 className="text-3xl font-bold text-blue-500">Recommended Books</h2>
+            <ul className="flex items-center gap-x-5">
                 {recommendedBooks.map((book) => (
-                    <li key={book.id}>{book.title}</li>
+                    <li className="text-sm font-bold" key={book.id}>
+                        {book.title}
+                    </li>
                 ))}
             </ul>
         </div>

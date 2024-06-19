@@ -1,16 +1,18 @@
+import Link from "next/link";
+
 export function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">BookStore</div>
             <ul className="menu">
                 <li>
-                    <a href="#home">Home</a>
+                    <Link href="/">Home</Link>
                 </li>
                 <li>
-                    <a href="#books">Books</a>
+                    <Link href="/books">Books</Link>
                 </li>
                 <li>
-                    <a href="#contact">Contact</a>
+                    <Link href="/login">Login</Link>
                 </li>
             </ul>
         </nav>

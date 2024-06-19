@@ -34,13 +34,17 @@ export function BookDetails({ bookId }: Props) {
     if (!book) return null;
 
     return (
-        <div className="container mx-auto p-4">
-            <h2 className="text-2xl font-bold mb-4">Book Details</h2>
-            <div>Title: {book.title}</div>
-            <div>Author: {book.artist}</div>
-            <div>Category: {book.category}</div>
-            <div>Price: ${book.price}</div>
-            <div>Description: {book.description}</div>
+        <div className="container mx-auto px-4">
+            <h2 className="text-2xl mt-20 text-blue-500 font-bold mb-4">Book Details</h2>
+            <div className="flex text-black font-medium flex-col gap-y-4">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img className="w-40" src={book.image} alt={book.title} />
+                <div>Title: {book.title}</div>
+                <div>Author: {book.artist}</div>
+                <div>Category: {book.category}</div>
+                <div>Price: ${book.price}</div>
+                <div className="opacity-80">Description: {book.description}</div>
+            </div>
         </div>
     );
 }

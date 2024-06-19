@@ -20,6 +20,7 @@ export namespace Book {
 export type Book = {
     id: number;
     title: string;
+    image: string;
     artist: string;
     price: string;
     description: string;
