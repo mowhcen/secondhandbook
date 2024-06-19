@@ -1,0 +1,53 @@
+@import "variables";
+@import "mixins";
+
+.button {
+    @include flex-center;
+    background-color: $primary-color;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    &.secondary {
+        background-color: $secondary-color;
+
+        &:hover {
+            background-color: darken($secondary-color, 10%);
+        }
+    }
+
+    &.danger {
+        background-color: $danger-color;
+
+        &:hover {
+            background-color: darken($danger-color, 10%);
+        }
+    }
+}
+
+.base-button {
+    background-color: $primary-color;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.primary-button {
+    @extend .base-button;
+}
+
+.secondary-button {
+    @extend .base-button;
+    background-color: $secondary-color;
+}

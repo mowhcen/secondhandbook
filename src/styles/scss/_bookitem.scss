@@ -1,0 +1,26 @@
+@import "variables";
+
+.book-item {
+    border: 1px solid $gray;
+    padding: 1rem;
+    margin-bottom: 1rem;
+
+    .title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    .author {
+        font-size: 1rem;
+        color: $gray-dark;
+    }
+
+    .price {
+        font-size: 1.2rem;
+        color: $primary-color;
+    }
+
+    &:hover {
+        background-color: $gray-light;
+    }
+}

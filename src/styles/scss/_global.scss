@@ -1,0 +1,39 @@
+@import "variables";
+
+body {
+    font-family: $font-family;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+button.primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .book-item {
+        padding: 0.5rem;
+    }
+}

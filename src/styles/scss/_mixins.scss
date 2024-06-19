@@ -1,0 +1,10 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gradient-background($color1, $color2) {
+    background: $color1;
+    background: linear-gradient(to bottom, $color1, $color2);
+}
